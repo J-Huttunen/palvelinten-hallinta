@@ -187,7 +187,7 @@ Total run time:   9.345 s
 
 ## NTFY testaus cronjobilla
 
-Kävin tekemässä ntfy:n sovelluksella palvelimen osoitteeseen ilmoitukset. Testasin ajaa `curl -d "successful" http://172.234.120.86/ntfyTopic`,  joka lähetti puhelimeeni ilmoituksen. 
+Kävin tekemässä ntfy:n sovelluksella palvelimen osoitteeseen ilmoitusten tilauksen. Testasin ajaa `curl -d "successful" http://172.234.120.86/ntfyTopic`,  joka lähetti puhelimeeni ilmoituksen. 
 
 ![kuva](images/h7/12.png)
 
