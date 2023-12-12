@@ -99,7 +99,7 @@ minion:
  `- ntfy-1:`: Määrittelee minionin nimen, tässä "ntfy-1". 
 `location: se-sto`: Määrittää minionin sijainnin, tässä "se-sto" eli Tukholma, Ruotsi.
 
-Tämä profiilitiedosto antaa Salt Cloudille ohjeet siitä, miten se luo ja asentaa minionin (Salt-asiakas) Linode-palvelimelle. Tässä määritellään yksi minion, nimeltään "ntfy-1", ja määritellään sen sijainti "se-sto" (Tukholma, Ruotsi). Tämä profiilitiedosto käytetään sitten `sudo salt-cloud -m /srv/cloud/ntfy` -komentoa suoritettaessa.
+Tämä profiilitiedosto antaa Salt Cloudille ohjeet siitä, miten se luo ja asentaa minionin (Salt-asiakas) Linode-palvelimelle. Tässä määritellään yksi minion, nimeltään "ntfy-1", ja määritellään sen sijainti "se-sto".
 
 Komennolla `sudo salt-cloud  -m /srv/cloud/ntfy` sain automaattisesti vuokrattua minion koneen.
 
