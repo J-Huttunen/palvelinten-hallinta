@@ -1,7 +1,7 @@
 Tarkoituksena oli automatisoida ntfy -palvelimen asennus käyttäen saltia. 
 NTFY on yksinkertainen HTTP-pohjainen pub-sub (publish-subscribe) -ilmoituspalvelu.
 
-## Asennus saltilla
+## Asennus saltilla & palvelimen vuokraus
 
 Vuokrasin linodelta palvelimen ja tein api avaimen. Api avaimelle annoin kaikki oikeudet, koska en löytänyt sopivaa komboa, jolla saisin tämän muuten toimimaan. 
 
