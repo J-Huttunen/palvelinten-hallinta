@@ -109,6 +109,69 @@ Master -koneella näkyi automaattisesti minionin avain hyväksyttynä.
 
 Komennolla: `sudo salt 'ntfy*' state.apply ntfy` ajoin ntfy -palvelimen asennuksen vuokratulle minion -koneelle.
 
+```bash
+sudo salt '*' state.apply ntfy
+ntfy-1:
+----------
+          ID: /etc/apt/keyrings
+    Function: file.directory
+      Result: True
+     Comment: The directory /etc/apt/keyrings is in the correct state
+     Started: 15:04:47.397052
+    Duration: 4.645 ms
+     Changes:
+----------
+          ID: apt-transport-https
+    Function: pkg.installed
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 15:04:48.152220
+    Duration: 22.831 ms
+     Changes:
+----------
+          ID: /etc/apt/keyrings/archive.heckel.io.gpg
+    Function: file.managed
+      Result: True
+     Comment: File /etc/apt/keyrings/archive.heckel.io.gpg is in the correct state
+     Started: 15:04:48.175365
+    Duration: 26.874 ms
+     Changes:
+----------
+          ID: /etc/apt/sources.list.d/archive.heckel.io.list
+    Function: file.managed
+      Result: True
+     Comment: File /etc/apt/sources.list.d/archive.heckel.io.list is in the correct state
+     Started: 15:04:48.202549
+    Duration: 24.537 ms
+     Changes:
+----------
+          ID: install_ntfy
+    Function: pkg.installed
+        Name: ntfy
+      Result: True
+     Comment: All specified packages are already installed
+     Started: 15:04:48.227265
+    Duration: 10.547 ms
+     Changes:
+----------
+          ID: ntfyService
+    Function: service.running
+        Name: ntfy
+      Result: True
+     Comment: The service ntfy is already running
+     Started: 15:04:48.238784
+    Duration: 19.738 ms
+     Changes:
+
+Summary for ntfy-1
+------------
+Succeeded: 6
+Failed:    0
+------------
+Total states run:     6
+Total run time: 109.172 ms
+```
+
 ## NTFY testaus cronjobilla
 
 Kävin tekemässä ntfy:n sovelluksella palvelimen osoitteeseen ilmoitusten tilauksen. Testasin ajaa `curl -d "successful" http://172.234.120.86/ntfyTopic`,  joka lähetti puhelimeeni ilmoituksen. 
