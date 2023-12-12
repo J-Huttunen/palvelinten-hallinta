@@ -7,6 +7,8 @@ Vuokrasin linodelta palvelimen ja tein api avaimen. Api avaimelle annoin kaikki 
 
 ![kuva](images/h7/1.png)
 
+![kuva](images/h7/2.png)
+
 Otin ssh yhteyden linode palvelin koneelle. Asensin siihen salt-masterin ja salt-cloudin.
 
 Tein `/etc/salt/cloud.providers` -hakemistoon `linode.conf` -tiedoston.
