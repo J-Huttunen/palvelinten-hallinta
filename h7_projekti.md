@@ -176,7 +176,6 @@ Total run time: 109.172 ms
 
 Kävin tekemässä ntfy:n sovelluksella palvelimen osoitteeseen ilmoitusten tilauksen. Testasin ajaa `curl -d "successful" http://172.234.120.86/ntfyTopic`,  joka lähetti puhelimeeni ilmoituksen. 
 
-![kuva](images/h7/12.png)
 
 Tein ensin testimielessä virtuaalikoneella cronjobiin määrityksen, joka lähettää ilmoituksia joka 2. minuutti. Komennolla `crontab -e` avasin cronjobin asetustiedoston. Sinne laitoin 
 ```
