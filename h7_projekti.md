@@ -178,11 +178,12 @@ Total run time: 109.172 ms
 
 Kävin tekemässä ntfy:n sovelluksella palvelimen osoitteeseen ilmoitusten tilauksen. Testasin ajaa `curl -d "successful" http://172.234.120.86/ntfyTopic`,  joka lähetti puhelimeeni ilmoituksen. 
 
-
 Tein ensin testimielessä virtuaalikoneella cronjobiin määrityksen, joka lähettää ilmoituksia joka 2. minuutti. Komennolla `crontab -e` avasin cronjobin asetustiedoston. Sinne laitoin 
 ```
 */2 * * * * curl -d "jeejee cronjob" http://172.234.120.86/ntfyTopic
 ```
+
+![kuva](images/h7/12.png)
 
 Kävin vaihtamassa tämän, että cronjob päivittää virtuaalikoneen jokaisen tunnin viides minuutti ja lähettää curlilla ntfy -palvelimelle "updates successful", jos päivityksen onnistuvat:
 `crontab -e`
@@ -190,7 +191,7 @@ Kävin vaihtamassa tämän, että cronjob päivittää virtuaalikoneen jokaisen 
 5 * * * *  sudo apt update -y && sudo apt upgrade -y && curl -d "updates successful" http://172.234.120.86/ntfyTopic
 ```
 
-![kuva](images/h7/11.png)
+![kuva](images/h7/3.png)
 
 ## Palomuuri saltilla
 
