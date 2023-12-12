@@ -183,7 +183,7 @@ Tein ensin testimielessä virtuaalikoneella cronjobiin määrityksen, joka lähe
 */2 * * * * curl -d "jeejee cronjob" http://172.234.120.86/ntfyTopic
 ```
 
-![kuva](images/h7/12.png)
+![kuva](images/h7/4.png)
 
 Kävin vaihtamassa tämän, että cronjob päivittää virtuaalikoneen jokaisen tunnin viides minuutti ja lähettää curlilla ntfy -palvelimelle "updates successful", jos päivityksen onnistuvat:
 `crontab -e`
